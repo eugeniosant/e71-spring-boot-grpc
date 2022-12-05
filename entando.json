@@ -4,7 +4,40 @@
             "name": "e71-spring-boot-ms",
             "stack": "spring-boot",
             "healthCheckPath": "/api/health",
-            "roles": ["role1"]
+            "roles": ["role1"],
+            "env": [
+                { 
+                    "name": "REDIS_ACTIVE",
+                    "value": "true"
+                },{ 
+                    "name": "REDIS_ADDRESS",
+                    "value": "redis://redis:6379"
+                },{ 
+                    "name": "SLAVE_INSTANCE_ID",
+                    "value": "solr-client"
+                },{ 
+                    "name": "ENTANDO_RB_CONFIG_ON_FILE",
+                    "value": "false"
+                },{ 
+                    "name": "ENTANDO_RB_CONSUMER_ENTANDO7_CORE_LIB_ACTIVE",
+                    "value": "true"
+                },{ 
+                    "name": "ENTANDO_RB_CONSUMER_ENTANDO7_PORTAL_LIB_ACTIVE",
+                    "value": "true"
+                },{ 
+                    "name": "ENTANDO_RB_CONSUMER_ENTANDO7_PLUGIN_CMS_LIB_ACTIVE",
+                    "value": "true"
+                },{ 
+                    "name": "ENTANDO_RB_CONSUMER_ENTANDO7_CORE_LIB_DEFAULT_GRPC_HOST_PORT",
+                    "value": "quickstart-server-grpc-service:8088"
+                },{ 
+                    "name": "ENTANDO_RB_CONSUMER_ENTANDO7_PORTAL_LIB_DEFAULT_GRPC_HOST_PORT",
+                    "value": "quickstart-server-grpc-service:8088"
+                },{ 
+                    "name": "ENTANDO_RB_CONSUMER_ENTANDO7_PLUGIN_CMS_LIB_DEFAULT_GRPC_HOST_PORT",
+                    "value": "quickstart-server-grpc-service:8088"
+                }
+            ]
         }
     ],
     "microfrontends": [
@@ -47,7 +80,7 @@
         "keycloak"
     ],
     "name": "e71-spring-boot",
-    "version": "0.0.5",
+    "version": "0.0.6",
     "description": "e71-react-widget description",
     "type": "bundle"
 }

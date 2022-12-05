@@ -1,54 +1,150 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
-	<modelVersion>4.0.0</modelVersion>
-	<parent>
-		<groupId>org.springframework.boot</groupId>
-		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.7.5</version>
-		<relativePath/> <!-- lookup parent from repository -->
-	</parent>
-	<groupId>com.entando.example</groupId>
-	<artifactId>e71-spring-boot-ms</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
-	<name>e71-spring-boot-ms</name>
-	<description>Demo project for Spring Boot</description>
-	<properties>
-		<java.version>11</java.version>
-	</properties>
-	<dependencies>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-security</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.keycloak</groupId>
-			<artifactId>keycloak-spring-boot-starter</artifactId>
-			<version>15.1.1</version>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-actuator</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
-		</dependency>
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.7.5</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
+    <groupId>com.entando.example</groupId>
+    <artifactId>e71-spring-boot-ms</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>e71-spring-boot-ms</name>
+    <description>Demo project for Spring Boot</description>
 
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-test</artifactId>
-			<scope>test</scope>
-		</dependency>
-	</dependencies>
+    <repositories>
+        <repository>
+            <id>e7</id>
+            <url>https://github.com/eugeniosant/eN7-repo/raw/repository</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
+        
+        
+    <properties>
+        <java.version>11</java.version>
+        <en7.version>7.1.1.0</en7.version>
+    </properties>
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-security</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.keycloak</groupId>
+            <artifactId>keycloak-spring-boot-starter</artifactId>
+            <version>15.1.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+                
+                
+                
+                
+        <!-- starting grpc client -->
 
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-			</plugin>
-		</plugins>
-	</build>
+        <dependency>
+            <groupId>org.entando</groupId>
+            <artifactId>entando7-rb-lib</artifactId>
+            <version>${en7.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.entando</groupId>
+            <artifactId>entando7-ms-engine</artifactId>
+            <version>${en7.version}</version>
+            <type>jar</type>
+        </dependency>
+
+        <dependency>
+            <groupId>org.entando</groupId>
+            <artifactId>entando7-core-lib</artifactId>
+            <version>${en7.version}</version>
+            <type>jar</type>
+        </dependency>
+
+        <dependency>
+            <groupId>org.entando</groupId>
+            <artifactId>entando7-portal-lib</artifactId>
+            <version>${en7.version}</version>
+            <type>jar</type>
+        </dependency>
+
+        <dependency>
+            <groupId>org.entando.entando7.plugins</groupId>
+            <artifactId>entando7-plugins-cms-lib</artifactId>
+            <version>${en7.version}</version>
+            <type>jar</type>
+        </dependency>
+        
+        <dependency>
+            <groupId>org.springframework.data</groupId>
+            <artifactId>spring-data-redis</artifactId>
+            <version>2.5.4</version>
+        </dependency>
+        <dependency>
+            <groupId>io.lettuce</groupId>
+            <artifactId>lettuce-core</artifactId>
+            <version>6.1.4.RELEASE</version>
+        </dependency>
+        
+        <dependency>
+            <groupId>org.entando.entando7.plugins</groupId>
+            <artifactId>entando7-plugins-redis-engine</artifactId>
+            <version>${en7.version}</version>
+            <type>jar</type>
+        </dependency>
+        
+        <dependency>
+            <groupId>org.entando.entando7.plugins</groupId>
+            <artifactId>entando7-plugins-redisclient-core</artifactId>
+            <version>${en7.version}</version>
+            <type>jar</type>
+        </dependency>
+        <dependency>
+            <groupId>org.entando.entando7.plugins</groupId>
+            <artifactId>entando7-plugins-redisclient-portal</artifactId>
+            <version>${en7.version}</version>
+            <type>jar</type>
+        </dependency>
+        <dependency>
+            <groupId>org.entando.entando7.plugins</groupId>
+            <artifactId>entando7-plugins-redisclient-cms</artifactId>
+            <version>${en7.version}</version>
+            <type>jar</type>
+        </dependency>
+                
+        <!-- end grpc client -->
+                
+        <!-- Test -->
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
 
 </project>
