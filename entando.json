@@ -83,7 +83,7 @@
         "keycloak"
     ],
     "name": "e71-spring-boot",
-    "version": "0.0.7",
+    "version": "0.0.8",
     "description": "e71-react-widget description",
     "type": "bundle"
 }
