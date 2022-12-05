@@ -7,6 +7,9 @@
             "roles": ["role1"],
             "env": [
                 { 
+                    "name": "SPRING_REDIS_HOST",
+                    "value": "redis"
+                },{ 
                     "name": "REDIS_ACTIVE",
                     "value": "true"
                 },{ 
@@ -80,7 +83,7 @@
         "keycloak"
     ],
     "name": "e71-spring-boot",
-    "version": "0.0.6",
+    "version": "0.0.7",
     "description": "e71-react-widget description",
     "type": "bundle"
 }
