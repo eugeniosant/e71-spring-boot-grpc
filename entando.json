@@ -31,6 +31,9 @@
                     "name": "ENTANDO_RB_CONSUMER_ENTANDO7_PLUGIN_CMS_LIB_ACTIVE",
                     "value": "true"
                 },{ 
+                    "name": "ENTANDO_RB_CONSUMER_ROMA_LIB_ACTIVE",
+                    "value": "true"
+                },{ 
                     "name": "ENTANDO_RB_CONSUMER_ENTANDO7_CORE_LIB_DEFAULT_GRPC_HOST_PORT",
                     "value": "test-en7-grpc-service:8088"
                 },{ 
@@ -38,6 +41,9 @@
                     "value": "test-en7-grpc-service:8088"
                 },{ 
                     "name": "ENTANDO_RB_CONSUMER_ENTANDO7_PLUGIN_CMS_LIB_DEFAULT_GRPC_HOST_PORT",
+                    "value": "test-en7-grpc-service:8088"
+                },{ 
+                    "name": "ENTANDO_RB_CONSUMER_ROMA_LIB_DEFAULT_GRPC_HOST_PORT",
                     "value": "test-en7-grpc-service:8088"
                 }
             ]

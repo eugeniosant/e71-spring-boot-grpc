@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components>
+<exposableBeans component="roma-lib">
+    <bean id="RomaManager">ir.comuneroma.service.IRomaService</bean>
+</exposableBeans>
+</components>
