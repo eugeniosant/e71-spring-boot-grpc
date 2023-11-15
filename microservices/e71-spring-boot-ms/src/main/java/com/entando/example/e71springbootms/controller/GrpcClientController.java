@@ -2,6 +2,7 @@ package com.entando.example.e71springbootms.controller;
 
 import com.agiletec.aps.system.services.group.Group;
 import com.agiletec.aps.system.services.group.IGroupManager;
+import ir.comuneroma.service.IRomaService;
 import java.util.List;
 //import javax.annotation.security.RolesAllowed;
 import org.entando.entando.ent.system.remotebean.annotation.ProxyAutowired;
@@ -17,11 +18,25 @@ public class GrpcClientController {
     @ProxyAutowired
     private IGroupManager groupManager;
     
+    @ProxyAutowired
+    private IRomaService romaService;
+    
     @CrossOrigin
     @GetMapping(value = "/api/groups", produces = "application/json")
     public MyGroupResponse getExample() {
         try {
             return new MyGroupResponse(this.groupManager);
+        } catch (Exception e) {
+            logger.error("Errore", e);
+            throw e;
+        }
+    }
+
+    @CrossOrigin
+    @GetMapping(value = "/api/roma", produces = "application/json")
+    public String getRoma() {
+        try {
+            return this.romaService.getMessage();
         } catch (Exception e) {
             logger.error("Errore", e);
             throw e;
