@@ -13,8 +13,8 @@
                     "name": "REDIS_ACTIVE",
                     "value": "true"
                 },{ 
-                    "name": "REDIS_ADDRESS",
-                    "value": "redis://redis:6379"
+                    "name": "REDIS_ADDRESSES",
+                    "value": "redis-node-0.redis-headless.test-en7.svc.cluster.local:26379,redis-node-1.redis-headless.test-en7.svc.cluster.local:26379,redis-node-2.redis-headless.test-en7.svc.cluster.local:26379"
                 },{ 
                     "name": "SLAVE_INSTANCE_ID",
                     "value": "solr-client"
@@ -32,13 +32,13 @@
                     "value": "true"
                 },{ 
                     "name": "ENTANDO_RB_CONSUMER_ENTANDO7_CORE_LIB_DEFAULT_GRPC_HOST_PORT",
-                    "value": "quickstart-server-grpc-service:8088"
+                    "value": "test-en7-grpc-service:8088"
                 },{ 
                     "name": "ENTANDO_RB_CONSUMER_ENTANDO7_PORTAL_LIB_DEFAULT_GRPC_HOST_PORT",
-                    "value": "quickstart-server-grpc-service:8088"
+                    "value": "test-en7-grpc-service:8088"
                 },{ 
                     "name": "ENTANDO_RB_CONSUMER_ENTANDO7_PLUGIN_CMS_LIB_DEFAULT_GRPC_HOST_PORT",
-                    "value": "quickstart-server-grpc-service:8088"
+                    "value": "test-en7-grpc-service:8088"
                 }
             ]
         }
@@ -83,7 +83,7 @@
         "keycloak"
     ],
     "name": "e71-spring-boot",
-    "version": "0.0.8",
+    "version": "0.0.10",
     "description": "e71-react-widget description",
     "type": "bundle"
 }
